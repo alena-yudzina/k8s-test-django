@@ -2,3 +2,5 @@
 __pycache__/
 *.py[cod]
 *$py.class
+django-config.yml
+docker-compose.override.yml

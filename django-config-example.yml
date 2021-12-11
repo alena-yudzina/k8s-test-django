@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: django-config
+data:
+  SECRET_KEY: "test"
+  DATABASE_URL: "postgres://..."
+  ALLOWED_HOSTS: "test"
+  DEBUG: "test"

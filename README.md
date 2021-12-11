@@ -21,6 +21,48 @@ $ docker-compose run web ./manage.py createsuperuser
 
 Для тонкой настройки используйте переменные окружения. Список доступных переменных можно найти внутри файла `docker-compose.yml`.
 
+## Как развернуть сайт с помощью Kubernates
+
+Установить [Kubernetes](https://kubernetes.io/ru/docs/tasks/tools/install-kubectl/)
+Установить [Minicube](https://minikube.sigs.k8s.io/docs/start/)
+Установить [VirtualBox](https://www.virtualbox.org/)
+
+Добавить ноду minikube:
+
+```shell-session
+$ minikube start --driver=virtualbox
+```
+
+Собрать образ сайта для создания сервиса:
+
+```shell-session
+$ minikube minikube image build -t django_app backend_main_django
+```
+
+Поднять базу данных:
+
+```shell-session
+$ docker-compose up
+```
+
+Заполнить файл `django-config-example.yml` своими переменными окружения, переименовать его в `django-config.yml` и собрать `configMap` командой в новом терминале:
+
+```shell-session
+$ kubectl apply -f django-config.yml
+```
+
+Запустить сервис:
+
+```shell-session
+$ kubectl apply -f django-service.yml
+```
+
+Узнать адрес сервиса командой:
+
+```shell-session
+$ minikube
+```
+
 ## Переменные окружения
 
 Образ с Django считывает настройки из переменных окружения:
