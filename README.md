@@ -53,10 +53,11 @@ $ docker-compose up
 $ kubectl apply -f django-config.yml
 ```
 
-Запустить `ingress `:
+Запустить `ingress ` и `cronjob`:
 
 ```shell-session
 $ kubectl apply -f django-ingress.yml
+$ kubectl apply -f django-cronjob.yml
 ```
 
 Запустить сервис:
