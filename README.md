@@ -23,9 +23,11 @@ $ docker-compose run web ./manage.py createsuperuser
 
 ## Как развернуть сайт с помощью Kubernates
 
-Установить [Kubernetes](https://kubernetes.io/ru/docs/tasks/tools/install-kubectl/)
-Установить [Minicube](https://minikube.sigs.k8s.io/docs/start/)
-Установить [VirtualBox](https://www.virtualbox.org/)
+Установить [Kubernetes](https://kubernetes.io/ru/docs/tasks/tools/install-kubectl/).
+
+Установить [Minicube](https://minikube.sigs.k8s.io/docs/start/).
+
+Установить [VirtualBox](https://www.virtualbox.org/).
 
 Добавить ноду minikube:
 
@@ -60,7 +62,7 @@ $ kubectl apply -f django-service.yml
 Узнать адрес сервиса командой:
 
 ```shell-session
-$ minikube
+$ minikube service django-service
 ```
 
 ## Переменные окружения
