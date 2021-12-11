@@ -72,6 +72,12 @@ $ kubectl apply -f django-service.yml
 echo "$(minikube ip) example.test" | sudo tee -a /etc/hosts
 ```
 
+Для запуска миграций необходимо выполнить команду:
+
+```shell-session
+kubectl apply -f django-migrate-job.yml
+```
+
 ## Переменные окружения
 
 Образ с Django считывает настройки из переменных окружения:
