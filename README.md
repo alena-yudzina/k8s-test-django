@@ -53,16 +53,22 @@ $ docker-compose up
 $ kubectl apply -f django-config.yml
 ```
 
+Запустить `ingress `:
+
+```shell-session
+$ kubectl apply -f django-ingress.yml
+```
+
 Запустить сервис:
 
 ```shell-session
 $ kubectl apply -f django-service.yml
 ```
 
-Узнать адрес сервиса командой:
+Сделать сервис доступным по адресу `example.test`:
 
 ```shell-session
-$ minikube service django-service
+echo "$(minikube ip) example.test" | sudo tee -a /etc/hosts
 ```
 
 ## Переменные окружения
