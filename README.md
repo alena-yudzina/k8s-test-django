@@ -40,7 +40,7 @@ $ minikube start --driver=virtualbox
 Собрать образ сайта для создания сервиса:
 
 ```shell-session
-$ minikube minikube image build -t django_app backend_main_django
+$ minikube image build -t django_app backend_main_django
 ```
 
 Поднять базу данных:
