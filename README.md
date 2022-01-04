@@ -21,13 +21,15 @@ $ docker-compose run web ./manage.py createsuperuser
 
 Для тонкой настройки используйте переменные окружения. Список доступных переменных можно найти внутри файла `docker-compose.yml`.
 
-## Как развернуть сайт с помощью Kubernates
+## Как развернуть сайт с помощью Kubernetes
 
 Установить [Kubernetes](https://kubernetes.io/ru/docs/tasks/tools/install-kubectl/).
 
 Установить [Minicube](https://minikube.sigs.k8s.io/docs/start/).
 
 Установить [VirtualBox](https://www.virtualbox.org/).
+
+Установить [Helm](https://helm.sh/).
 
 Добавить ноду minikube:
 
