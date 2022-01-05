@@ -46,7 +46,7 @@ $ minikube image build -t django_app backend_main_django
 Поднять базу данных:
 
 ```shell-session
-$ docker-compose up
+$ helm install django-psql bitnami/postgresql
 ```
 
 Заполнить файл `django-config-example.yml` своими переменными окружения, переименовать его в `django-config.yml` и собрать `configMap` командой в новом терминале:
